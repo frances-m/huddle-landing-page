@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 @import './adjust.css';
+@import './visually-hidden.css';
 html {
   font-size: 62.5%;
 }
@@ -12,6 +13,21 @@ html {
 body {
   background-color: #674baf;
   background-image: url(../images/bg-mobile.svg);
+}
+
+footer .social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 10rem;
+  height: 4rem;
+  width: 4rem;
+}
+footer .social-media a svg {
+  fill: white;
+  width: 3rem;
+  max-height: 3rem;
 }
 
 /*# sourceMappingURL=main.css.map */
