@@ -16,25 +16,208 @@ html {
 body {
   background-color: $violet;
   background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  min-height: 100vh;
+
+
+  header,
+  main,
+  footer {
+    width: 30.8rem;
+    margin: 0 auto;
+  }
+}
+
+header {
+  height: 10rem;
+
+  svg {
+    width: 12.9rem;
+    padding-top: 3rem;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    margin: 0 auto;
+    margin-top: 2.3rem;
+    width: 98%;
+  }
+
+  .main-text {
+    text-align: center;
+    
+    h2 {
+      @extend %poppins-600;
+      font-size: 2.38rem;
+      margin-top: 6rem;
+    }
+
+    p {
+      @extend %opensans-400;
+      margin: 0 auto;
+      font-size: 1.6rem;
+      margin-top: 1.5rem;
+      line-height: 2.36rem;
+    }
+
+    a {
+      display: block;
+      @extend %poppins-400;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: $violet;
+      background-color: white;
+      width: 65%;
+      padding: 1.1rem 0;
+      margin: 0 auto;
+      margin-top: 2.5rem;
+      border-radius: 4rem;
+      box-shadow: 0 .4rem 1rem hsla(0, 0%, 0%, .3);
+
+      &:hover {
+        background-color: $light-magenta;
+        color: white;
+      }
+
+      &:active {
+        background-color: $magenta;
+        color: white;
+      }
+    }
+  }
 }
 
 footer {
   .social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 6.3rem;
 
     a {
-      display: flex;
+      display: inline-flex;
       justify-content: center;
       align-items: center;
       border: 1px solid white;
       border-radius: 10rem;
-      height: 4rem;
-      width: 4rem;
+      height: 2.8rem;
+      width: 2.8rem;
+      margin: 0 .5rem;
 
       svg {
         fill: white;
-        width: 3rem;
-        max-height: 3rem;
+        height: 50%;
+      }
+
+      #instagram-icon {
+        height: 60%;
+      }
+
+      &:hover {
+        border-color: $magenta;
+
+        svg {
+          fill: $magenta;
+        }
+      }
+
+      &:active {
+        border-color: $light-magenta;
+
+        svg {
+          fill: $light-magenta;
+        }
       }
     }
   }
+
+  .attribution {
+    @extend %poppins-400;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 5rem;
+
+    a {
+      text-decoration: none;
+      @extend %poppins-600;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: $magenta;
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 400px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    margin: 0 auto;
+
+    header, 
+    main, 
+    footer {
+      width: 130.4rem;
+    }
+  }
+
+  body header {
+    height: 20rem;
+
+    svg {
+      width: auto;
+      height: 8.4rem;
+    }
+  }
+
+  body main {
+    flex-direction: row;
+    
+
+    img {
+      margin: 0;
+      width: 71rem;
+      padding-left: .7rem;
+    }
+
+    .main-text {
+      width: 40%;
+      text-align: left;
+      padding-left: 5.4rem;
+
+      h2 {
+        font-size: 3rem;
+      }
+
+      a {
+        width: 20rem;
+        margin: 0;
+        padding: 1.5rem 0;
+        font-size: 1.6rem;
+        text-align: center;
+      }
+    }
+  }
+
+  body footer {
+    .social-media {
+      justify-content: right;
+
+      a {
+        height: 4rem;
+        width: 4rem;
+
+      }
+
+    }
+  }
+
+
 }

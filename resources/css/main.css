@@ -1,6 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
 @import './adjust.css';
 @import './visually-hidden.css';
+footer .attribution, main .main-text a {
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+footer .attribution a, main .main-text h2 {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+}
+
+main .main-text p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -13,21 +28,168 @@ html {
 body {
   background-color: #674baf;
   background-image: url(../images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  min-height: 100vh;
+}
+body header,
+body main,
+body footer {
+  width: 30.8rem;
+  margin: 0 auto;
 }
 
-footer .social-media a {
+header {
+  height: 10rem;
+}
+header svg {
+  width: 12.9rem;
+  padding-top: 3rem;
+}
+
+main {
   display: flex;
+  flex-direction: column;
+}
+main img {
+  margin: 0 auto;
+  margin-top: 2.3rem;
+  width: 98%;
+}
+main .main-text {
+  text-align: center;
+}
+main .main-text h2 {
+  font-size: 2.38rem;
+  margin-top: 6rem;
+}
+main .main-text p {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  line-height: 2.36rem;
+}
+main .main-text a {
+  display: block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #674baf;
+  background-color: white;
+  width: 65%;
+  padding: 1.1rem 0;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  border-radius: 4rem;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
+}
+main .main-text a:hover {
+  background-color: #efa9ef;
+  color: white;
+}
+main .main-text a:active {
+  background-color: #e882e8;
+  color: white;
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 6.3rem;
+}
+footer .social-media a {
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   border: 1px solid white;
   border-radius: 10rem;
-  height: 4rem;
-  width: 4rem;
+  height: 2.8rem;
+  width: 2.8rem;
+  margin: 0 0.5rem;
 }
 footer .social-media a svg {
   fill: white;
-  width: 3rem;
-  max-height: 3rem;
+  height: 50%;
+}
+footer .social-media a #instagram-icon {
+  height: 60%;
+}
+footer .social-media a:hover {
+  border-color: #e882e8;
+}
+footer .social-media a:hover svg {
+  fill: #e882e8;
+}
+footer .social-media a:active {
+  border-color: #efa9ef;
+}
+footer .social-media a:active svg {
+  fill: #efa9ef;
+}
+footer .attribution {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+footer .attribution a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+footer .attribution a:hover {
+  color: #e882e8;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 400px) {
+  body {
+    background-image: url(../images/bg-desktop.svg);
+    margin: 0 auto;
+  }
+  body header,
+body main,
+body footer {
+    width: 130.4rem;
+  }
+
+  body header {
+    height: 20rem;
+  }
+  body header svg {
+    width: auto;
+    height: 8.4rem;
+  }
+
+  body main {
+    flex-direction: row;
+  }
+  body main img {
+    margin: 0;
+    width: 71rem;
+    padding-left: 0.7rem;
+  }
+  body main .main-text {
+    width: 40%;
+    text-align: left;
+    padding-left: 5.4rem;
+  }
+  body main .main-text h2 {
+    font-size: 3rem;
+  }
+  body main .main-text a {
+    width: 20rem;
+    margin: 0;
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  body footer .social-media {
+    justify-content: right;
+  }
+  body footer .social-media a {
+    height: 4rem;
+    width: 4rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
