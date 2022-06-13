@@ -29,7 +29,7 @@ body {
   background-color: #674baf;
   background-image: url(../images/bg-mobile.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: top center;
   min-height: 100vh;
 }
@@ -146,7 +146,6 @@ footer .attribution a:hover {
 @media screen and (min-width: 1300px) {
   body {
     background-image: url(../images/bg-desktop.svg);
-    background-size: auto;
     background-position: initial;
     margin: 0 auto;
   }
